@@ -38,7 +38,7 @@ Set your own font-size and line-height using `fontRatio` and `lineRatio` variabl
 
 When setting the font-size using `fontRatio`, increase the value to make the font smaller (and vice verse).
 
-*Note:* Because each font is different, you will need to "tweak" `fontSize` and "eye ball" your final product to make sure that your character count is within the recommended range.
+_Note:_ Because each font is different, you will need to "tweak" `fontSize` and "eye ball" your final product to make sure that your character count is within the recommended range.
 
 Line-height (`lineRatio`) is set based on the `fontRatio` size, and defaults to 1.45 (the recommended line-height for maximum legibility).
 
@@ -75,7 +75,7 @@ h2 {
 h3 { etc...
 ```
 
-*Note:* Setting a specific font-size and line-height in your CSS file will make sure that your website remains accessible in case your viewer has javascript disabled. These numbers will be overridden as FlowType.JS updates the font-size and line-height numbers inline.
+_Note:_ Setting a specific font-size and line-height in your CSS file will make sure that your website remains accessible in case your viewer has javascript disabled. These numbers will be overridden as FlowType.JS updates the font-size and line-height numbers inline.
 
 ### Step 2: Include FlowType.JS ###
 
