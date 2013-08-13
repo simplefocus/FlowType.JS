@@ -34,13 +34,13 @@ $('body').flowtype({
 
 ### Font-size and line-height ###
 
-Set your own font-size and line-height using fontRatio and lineRatio variables.
+Set your own font-size and line-height using `fontRatio` and `lineRatio` variables.
 
-When setting the font-size using fontRatio, increase the value to make the font smaller (and vice verse).
+When setting the font-size using `fontRatio`, increase the value to make the font smaller (and vice verse).
 
-*Note:* Because each font is different, you will need to "tweak" fontSize and "eye ball" your final product to make sure that your character count is within the recommended range.
+*Note:* Because each font is different, you will need to "tweak" `fontSize` and "eye ball" your final product to make sure that your character count is within the recommended range.
 
-Line-height (lineRatio) is set based on the fontRatio size, and defaults to 1.45 (the recommended line-height for maximum legibility).
+Line-height (`lineRatio`) is set based on the `fontRatio` size, and defaults to 1.45 (the recommended line-height for maximum legibility).
 
 ```javascript
 $('body').flowtype({
