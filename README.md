@@ -56,6 +56,10 @@ $('body').flowtype({
 Prepare for FlowType.JS by making sure that the typography is flexible. Start with this CSS and make changes as necessary:
 
 ```css
+body {
+   font-size: 18px;
+   line-height: 26px;
+}
 h1,h2,h3,h4,h5,h6,p {
    font-family: inherit;
    font-size: inherit;
