@@ -8,6 +8,8 @@
 * is licensed under a Creative Commons Attribution-ShareAlike
 * 3.0 Unported License. Learn more about this license at:
 * http://creativecommons.org/licenses/by-sa/3.0/deed.en_US
+*
+* Thanks to Giovanni Difeterici (http://www.gdifeterici.com/)
 */
 
 (function($) {
