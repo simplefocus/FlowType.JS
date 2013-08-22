@@ -109,3 +109,5 @@ $('body').flowtype({
 ## Brought to you by... ##
 
 This wonderful piece of magic has been brought to you by the team at [Simple Focus](http://simplefocus.com). Follow Simple Focus on Twitter: [@simplefocus](http://twitter.com/simplefocus).
+
+FlowType.JS is licensed under the MIT License. See the LICENSE.txt file for copy permission.
