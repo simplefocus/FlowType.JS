@@ -31,30 +31,22 @@
 // =================
       changes = function(el) {
          var $el = $(el),
-            elw = $el.width();
+            unit = 'px',
+            elw = $el.width(); 
 
-            if (!settings.useEm) {
-               var width = elw > settings.maximum ? settings.maximum : elw < settings.minimum ? settings.minimum : elw,
+            if (settings.useEm) {
+               unit = 'em';
+               elw = elw / parseFloat($('body').css('font-size'));
+            }
+
+            var width = elw > settings.maximum ? settings.maximum : elw < settings.minimum ? settings.minimum : elw,
                fontBase = width / settings.fontRatio,
                fontSize = fontBase > settings.maxFont ? settings.maxFont : fontBase < settings.minFont ? settings.minFont : fontBase;
 
-               $el.css({
-                  'font-size'   : fontSize + 'px',
-                  'line-height' : fontSize * settings.lineRatio + 'px'
-               });
-            }
-            else
-            {
-               elw = elw / parseFloat($("body").css("font-size"));
-               var width = elw > settings.maximum ? settings.maximum : elw < settings.minimum ? settings.minimum : elw,
-               fontBase = width / settings.fontRatio,
-               fontSize = fontBase > settings.maxFont ? settings.maxFont : fontBase < settings.minFont ? settings.minFont : fontBase;
-
-               $el.css({
-                  'font-size'   : fontSize + 'em',
-                  'line-height' : settings.lineRatio + 'em'
-               });
-            }
+            $el.css({
+               'font-size'   : fontSize + unit,
+               'line-height' : settings.useEm ? settings.lineRatio + unit : fontSize * settings.lineRatio + unit
+            });
       };
 
 // Make the magic visible
