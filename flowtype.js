@@ -106,23 +106,3 @@
 
 
 }(window));
-
-// Demo setup
-// ==========
-
-// jQuery/Zepto setup
-if ( window.$ && window.$.fn.flowtype ) {
-    $('#demo-article').flowtype( {fontRatio:36} );
-    $('#demo-control').change(function(event) {
-    $('#demo-article').css('width', event.target.value+'%');
-    $('#demo-article')[0].updateFlowType();
-});
-// Native setup
-} else {
-    window.flowtype( document.getElementById('demo-article'), {fontRatio:36} );
-    document.getElementById('demo-control').addEventListener('change', function(event) {
-        document.getElementById('demo-article').style.width = event.target.value+'%';
-        document.getElementById('demo-article').updateFlowType();
-    }, false);
-}
-
