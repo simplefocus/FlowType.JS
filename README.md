@@ -91,6 +91,12 @@ To begin the magic, simply call FlowType.JS before the close of your body tag:
 $('body').flowtype();
 ```
 
+If you prefer not to use jQuery or Zepto, you can call FlowType.JS like this:
+
+```javascript
+flowtype(document.body);
+```
+
 ### Step 4: Make Changes ###
 
 You will most likely want to change the default settings. To do so, simply include these options in your code and tweak away:
@@ -106,8 +112,23 @@ $('body').flowtype({
 });
 ```
 
+and again, without jQuery or Zepto:
+
+```javascript
+flowtype(document.body, {
+   minimum   : 500,
+   maximum   : 1200,
+   minFont   : 12,
+   maxFont   : 40,
+   fontRatio : 30,
+   lineRatio : 1.45
+});
+```
+
 ## Brought to you by... ##
 
 This wonderful piece of magic has been brought to you by the team at [Simple Focus](http://simplefocus.com). Follow Simple Focus on Twitter: [@simplefocus](http://twitter.com/simplefocus).
+
+The compatibility for running without jQuery or Zepto brought to you by [Christian Dannie Storgaard (Cybolic)](http://cybolic.me).
 
 FlowType.JS is licensed under the MIT License. See the LICENSE.txt file for copy permission.
