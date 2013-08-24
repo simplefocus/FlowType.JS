@@ -43,6 +43,7 @@
 
 
     flowtype = function(element, options) {
+        options = options || {};
 
         // Establish default settings/variables
         // ====================================
