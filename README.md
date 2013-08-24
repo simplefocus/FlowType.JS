@@ -4,6 +4,8 @@ Responsive web typography at its finest: font-size and line-height based on elem
 
 Check out the [demo site](http://simplefocus.com/flowtype).
 
+For a code example of the demo, including how to run without jQuery or Zepto, see [this jsFiddle](http://jsfiddle.net/Cybolic/XEh23/).
+
 ## What does FlowType.JS do? ##
 
 Ideally, the most legible typography contains [between 45 and 75 characters per line](http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.2/). This is difficult to accomplish for all screen widths with only CSS media-queries. FlowType.JS eases this difficulty by changing the font-size—and subsequently the line-height—based on a specific element's width. This allows for a perfect character count per line at any screen width.
