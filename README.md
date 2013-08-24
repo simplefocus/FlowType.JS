@@ -4,6 +4,8 @@ Responsive web typography at its finest: font-size and line-height based on elem
 
 Check out the [demo site](http://simplefocus.com/flowtype).
 
+For a code example of the demo, including how to run without jQuery or Zepto, see [this jsFiddle](http://jsfiddle.net/Cybolic/XEh23/).
+
 ## What does FlowType.JS do? ##
 
 Ideally, the most legible typography contains [between 45 and 75 characters per line](http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.2/). This is difficult to accomplish for all screen widths with only CSS media-queries. FlowType.JS eases this difficulty by changing the font-size—and subsequently the line-height—based on a specific element's width. This allows for a perfect character count per line at any screen width.
@@ -91,6 +93,12 @@ To begin the magic, simply call FlowType.JS before the close of your body tag:
 $('body').flowtype();
 ```
 
+If you prefer not to use jQuery or Zepto, you can call FlowType.JS like this:
+
+```javascript
+flowtype(document.body);
+```
+
 ### Step 4: Make Changes ###
 
 You will most likely want to change the default settings. To do so, simply include these options in your code and tweak away:
@@ -106,8 +114,23 @@ $('body').flowtype({
 });
 ```
 
+and again, without jQuery or Zepto:
+
+```javascript
+flowtype(document.body, {
+   minimum   : 500,
+   maximum   : 1200,
+   minFont   : 12,
+   maxFont   : 40,
+   fontRatio : 30,
+   lineRatio : 1.45
+});
+```
+
 ## Brought to you by... ##
 
 This wonderful piece of magic has been brought to you by the team at [Simple Focus](http://simplefocus.com). Follow Simple Focus on Twitter: [@simplefocus](http://twitter.com/simplefocus).
+
+The compatibility for running without jQuery or Zepto brought to you by [Christian Dannie Storgaard (Cybolic)](http://cybolic.me).
 
 FlowType.JS is licensed under the MIT License. See the LICENSE.txt file for copy permission.
