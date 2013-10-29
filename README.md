@@ -108,7 +108,7 @@ $('body').flowtype({
 
 ## FlowType Sass Mixin ##
 
-FlowType is also available as a Sass Mixin.
+FlowType is also available as a Sass Mixin. The mixin provides the FlowType functionality using only CSS.
 
 To use the mixin, include the FlowType.scss file into your project and compile using your preferred Sass compiler. You may want to tweak the default settings found in the FlowType.scss file:
 
