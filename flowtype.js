@@ -39,10 +39,17 @@
       return this.each(function() {
       // Context for resize callback
          var that = this;
+<<<<<<< HEAD
       // Make changes upon resize
          $(window).resize(function(){changes(that);});
+=======
+         
+>>>>>>> ccfd8c74aa74e66de3a887b9d36093d2ad40e448
       // Set changes on load
          changes(this);
+         
+      // Make changes upon resize
+         $(window).resize(function(){changes(that);});
       });
    };
 }(jQuery));
