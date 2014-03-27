@@ -115,19 +115,18 @@ FlowType is also available as a Sass Mixin. The mixin provides the FlowType func
 To use the mixin, include the FlowType.scss file into your project and compile using your preferred Sass compiler. You may want to tweak the default settings found in the FlowType.scss file:
 
 ```scss
-$fontRatio: 35;
-$lineRatio: 1.45;
-$maxFont: 36;
+$minimum: 500;
+$maximum: 1200;
 $minFont: 12;
-$maximum: 1000;
-$minimum: 1;
+$maxFont: 40;
+$fontRatio: 30;
 ```
 
 Then, simply `@include` the mixin into your project:
 
 ```scss
 body {
-  @include flowtype($fontRatio, $lineRatio, $maxFont, $minFont, $maximum, $minimum);
+  @include flowtype($fontRatio, $maxFont, $minFont, $maximum, $minimum);
 }
 ```
 
