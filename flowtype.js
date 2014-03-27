@@ -1,8 +1,6 @@
 /*
-* If you create a derivative, please leave this text intact:
-*
-* FlowType.JS 1.0
-* Copyright (c) 2013, Simple Focus http://simplefocus.com/
+* FlowType.JS v1.1
+* Copyright 2013-2014, Simple Focus http://simplefocus.com/
 *
 * FlowType.JS by Simple Focus (http://simplefocus.com/)
 * is licensed under the MIT License. Read a copy of the
@@ -22,8 +20,7 @@
          minimum   : 1,
          maxFont   : 9999,
          minFont   : 1,
-         fontRatio : 35,
-         lineRatio : 1.45
+         fontRatio : 35
       }, options),
 
 // Do the magic math
@@ -34,25 +31,18 @@
             width = elw > settings.maximum ? settings.maximum : elw < settings.minimum ? settings.minimum : elw,
             fontBase = width / settings.fontRatio,
             fontSize = fontBase > settings.maxFont ? settings.maxFont : fontBase < settings.minFont ? settings.minFont : fontBase;
-
-         $el.css({
-            'font-size'   : fontSize + 'px',
-            'line-height' : fontSize * settings.lineRatio + 'px'
-         });
+         $el.css('font-size', fontSize + 'px');
       };
 
 // Make the magic visible
 // ======================
       return this.each(function() {
-         
       // Context for resize callback
          var that = this;
-         
-      // Set changes on load
-         changes(this);
-         
       // Make changes upon resize
          $(window).resize(function(){changes(that);});
+      // Set changes on load
+         changes(this);
       });
    };
 }(jQuery));

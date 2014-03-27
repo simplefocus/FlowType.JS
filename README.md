@@ -1,12 +1,12 @@
 # FlowType.JS #
 
-Responsive web typography at its finest: font-size and line-height based on element width.
+Responsive web typography at its finest: font-size ~~and line-height~~ based on element width.
 
 Check out the [demo site](http://simplefocus.com/flowtype).
 
 ## What does FlowType.JS do? ##
 
-Ideally, the most legible typography contains [between 45 and 75 characters per line](http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.2/). This is difficult to accomplish for all screen widths with only CSS media-queries. FlowType.JS eases this difficulty by changing the font-size—and subsequently the line-height—based on a specific element's width. This allows for a perfect character count per line at any screen width.
+Ideally, the most legible typography contains [between 45 and 75 characters per line](http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.2/). This is difficult to accomplish for all screen widths with only CSS media-queries. FlowType.JS eases this difficulty by changing the font-size ~~and line-height~~ based on a specific element's width. This allows for a perfect character count per line at any screen width.
 
 ## Options ##
 
@@ -34,22 +34,31 @@ $('body').flowtype({
 });
 ```
 
-### Font-size and line-height ###
+### Font-size ###
 
-Set your own font-size and line-height using `fontRatio` and `lineRatio` variables.
-
-When setting the font-size using `fontRatio`, increase the value to make the font smaller (and vice verse).
+Set your own font-size using the `fontRatio` variable. When using `fontRatio`, increase the value to make the font smaller (and vice versa).
 
 _Note:_ Because each font is different, you will need to "tweak" `fontSize` and "eye ball" your final product to make sure that your character count is within the recommended range.
 
-Line-height (`lineRatio`) is set based on the `fontRatio` size, and defaults to 1.45 (the recommended line-height for maximum legibility).
+~~Line-height (`lineRatio`) is set based on the `fontRatio` size, and defaults to 1.45 (the recommended line-height for maximum legibility).~~ See *line-height* below.
 
 ```javascript
 $('body').flowtype({
-   fontRatio : 30,
-   lineRatio : 1.45
+   fontRatio : 30
 });
 ```
+
+
+### Line-height ###
+
+In v1.0 of FlowType, we made the plugin set a specific line-height in pixels. We received many statements that setting a specific line-height is very dangerous. So, what did we do? We removed support for line-height in v1.1.
+
+What do I do now? It's quite simple: use unitless line-height in your CSS. It will make automatically make changes based on whatever the font-size. Here's an example of what we suggest for `line-height`:
+
+```css
+line-height: 1.45;
+```
+
 
 ## Getting Started ##
 
@@ -60,28 +69,22 @@ Prepare for FlowType.JS by making sure that the typography is flexible. Start wi
 ```css
 body {
    font-size: 18px;
-   line-height: 26px;
 }
+
 h1,h2,h3,h4,h5,h6,p {
-   font-family: inherit;
-   font-size: inherit;
+   line-height: 1.45;
 }
-h1 {
-   font-size: 4em;
-   line-height: 1em;
-}
-h2 {
-   font-size: 3em;
-   line-height: 1em;
-}
+
+h1 { font-size: 4em; }
+h2 { font-size: 3em; }
 h3 { etc...
 ```
 
-_Note:_ Setting a specific font-size and line-height in your CSS file will make sure that your website remains accessible in case your viewer has javascript disabled. These numbers will be overridden as FlowType.JS updates the font-size and line-height numbers inline.
+_Note:_ Setting a specific font-size in your CSS file will make sure that your website remains accessible in case your viewer has javascript disabled. These numbers will be overridden as FlowType.JS updates the font-size number inline.
 
 ### Step 2: Include FlowType.JS ###
 
-After you have downloaded FlowType.JS, include the `flowtype.jQuery.js` in the head of your HTML document.
+After you have downloaded FlowType.JS, include both jQuery and `flowtype.js` in the head of your HTML document.
 
 ### Step 3: Call FlowType.JS ###
 
@@ -101,8 +104,7 @@ $('body').flowtype({
    maximum   : 1200,
    minFont   : 12,
    maxFont   : 40,
-   fontRatio : 30,
-   lineRatio : 1.45
+   fontRatio : 30
 });
 ```
 
