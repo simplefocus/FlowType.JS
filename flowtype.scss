@@ -1,32 +1,25 @@
 /*
-* FlowType Sass Mixin 1.0
+* FlowType Sass Mixin 1.1
 */
 
 // Establish default settings/variables
 // ====================================
-$fontRatio: 35;
-$lineRatio: 1.45;
-$maxFont: 36;
-$minFont: 12;
 $maximum: 1000;
 $minimum: 1;
+$maxFont: 36;
+$minFont: 12;
+$fontRatio: 35;
 
 // Mixin start
 // ===========
-@mixin flowtype($maximum, $minimum, $maxFont, $minFont, $fontRatio, $lineRatio) {
+@mixin flowtype($maximum, $minimum, $maxFont, $minFont, $fontRatio) {
   $fontSize: $maxFont;
-  $lineHeight: $lineRatio;
-
   $tempFontSize: $fontSize;
-  $tempLineHeight: $lineHeight;
 
 // Output media query for minimum size
 // ===================================
   @media screen and (max-width: #{$minimum}px) {
-    $lineHeight: floor($minFont * $lineRatio);
-    
-    font-size: #{$minFont}px; 
-    line-height: #{$lineHeight}px; 
+    font-size: #{$minFont}px;
   }
 
 // Do the magic math
@@ -44,18 +37,14 @@ $minimum: 1;
       $fontSize: $fontBase;
     }
 
-    $lineHeight: floor($fontSize * $lineRatio);
-
 // Output media queries
 // ====================      
-    @if $tempLineHeight != $lineHeight or $tempFontSize != $fontSize {
+    @if $tempFontSize != $fontSize {
       @media screen and (min-width: #{$i}px) {
-        font-size: #{$fontSize}px; 
-        line-height: #{$lineHeight}px;
+        font-size: #{$fontSize}px;
       }
     }
-    
-    $tempLineHeight: $lineHeight;
+
     $tempFontSize: $fontSize;
   }
 }
