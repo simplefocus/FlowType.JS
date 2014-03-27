@@ -126,7 +126,7 @@ Then, simply `@include` the mixin into your project:
 
 ```scss
 body {
-  @include flowtype($fontRatio, $maxFont, $minFont, $maximum, $minimum);
+  @include flowtype($minimum, $maximum, $minFont, $maxFont, $fontRatio);
 }
 ```
 
