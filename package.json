@@ -1,0 +1,39 @@
+{
+  "name": "FlowType.JS",
+  "description": "Web typography at its finest: font-size and line-height based on element width.",
+  "version": "1.1.0",
+  "keywords": [
+    "responsive",
+    "typography",
+    "clever"
+  ],
+  "author": {
+    "name": "John Wilson",
+    "email": "john@j-wilson.com"
+  },
+  "contributors": [
+    {
+      "name": "Jean-cédric Thérond",
+      "email": "jean-cedric.therond@cellfishmedia.fr"
+    }
+  ],
+  "dependencies": {
+    "jquery": ""
+  },
+  "homepage": "http://simplefocus.com/flowtype",
+  "bugs": "https://github.com/simplefocus/FlowType.JS/issues",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/simplefocus/FlowType.JS.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.githubusercontent.com/simplefocus/FlowType.JS/master/LICENSE.txt"
+    }
+  ],
+  "analyze": false,
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
