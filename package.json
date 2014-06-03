@@ -32,7 +32,6 @@
       "url": "https://raw.githubusercontent.com/simplefocus/FlowType.JS/master/LICENSE.txt"
     }
   ],
-  "analyze": false,
   "engines": {
     "node": ">=0.10.0"
   }
