@@ -84,14 +84,18 @@ _Note:_ Setting a specific font-size in your CSS file will make sure that your w
 
 ### Step 2: Include FlowType.JS ###
 
-After you have downloaded FlowType.JS, include both jQuery and `flowtype.js` in the head of your HTML document.
+After you have downloaded FlowType.JS, include both jQuery or Prototype and `flowtype.js` in the head of your HTML document.
 
 ### Step 3: Call FlowType.JS ###
 
 To begin the magic, simply call FlowType.JS before the close of your body tag:
 
 ```javascript
+// jQuery:
 $('body').flowtype();
+
+// Prototype:
+$(document.body).flowtype();
 ```
 
 ### Step 4: Make Changes ###
@@ -110,6 +114,6 @@ $('body').flowtype({
 
 ## Brought to you by... ##
 
-This wonderful piece of magic has been brought to you by the team at [Simple Focus](http://simplefocus.com). Follow Simple Focus on Twitter: [@simplefocus](http://twitter.com/simplefocus).
+This wonderful piece of magic has been brought to you by the team at [Simple Focus](http://simplefocus.com). Follow Simple Focus on Twitter: [@simplefocus](http://twitter.com/simplefocus). FlowType also works with Prototype.js thanks to [Walter Davis Studio](http://walterdavisstudio.com).
 
 FlowType.JS is licensed under the MIT License. See the LICENSE.txt file for copy permission.
