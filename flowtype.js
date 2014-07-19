@@ -9,40 +9,66 @@
 *
 * Thanks to Giovanni Difeterici (http://www.gdifeterici.com/)
 */
-
-(function($) {
-   $.fn.flowtype = function(options) {
-
-// Establish default settings/variables
-// ====================================
-      var settings = $.extend({
+if(!!Prototype.Version){
+  Element.addMethods({
+    flowtype: function(element, options){
+      var settings = $H({
          maximum   : 9999,
          minimum   : 1,
          maxFont   : 9999,
          minFont   : 1,
          fontRatio : 35
-      }, options),
-
-// Do the magic math
-// =================
-      changes = function(el) {
-         var $el = $(el),
-            elw = $el.width(),
-            width = elw > settings.maximum ? settings.maximum : elw < settings.minimum ? settings.minimum : elw,
-            fontBase = width / settings.fontRatio,
-            fontSize = fontBase > settings.maxFont ? settings.maxFont : fontBase < settings.minFont ? settings.minFont : fontBase;
-         $el.css('font-size', fontSize + 'px');
+      }).merge($H(options));
+      
+      changes = function() {
+         var elw = element.getWidth(),
+            width = elw > settings.get('maximum') ? settings.get('maximum') : elw < settings.get('minimum') ? settings.get('minimum') : elw,
+            fontBase = width / settings.get('fontRatio'),
+            fontSize = fontBase > settings.get('maxFont') ? settings.get('maxFont') : fontBase < settings.get('minFont') ? settings.get('minFont') : fontBase;
+         element.setStyle('font-size:' + fontSize + 'px');
       };
-
-// Make the magic visible
-// ======================
-      return this.each(function() {
-      // Context for resize callback
-         var that = this;
-      // Make changes upon resize
-         $(window).resize(function(){changes(that);});
-      // Set changes on load
-         changes(this);
+      changes();
+      Event.observe(window, 'resize', function(){
+        changes();
       });
-   };
-}(jQuery));
+      return element;
+    }
+  });
+}else{
+  (function($) {
+     $.fn.flowtype = function(options) {
+
+  // Establish default settings/variables
+  // ====================================
+        var settings = $.extend({
+           maximum   : 9999,
+           minimum   : 1,
+           maxFont   : 9999,
+           minFont   : 1,
+           fontRatio : 35
+        }, options),
+
+  // Do the magic math
+  // =================
+        changes = function(el) {
+           var $el = $(el),
+              elw = $el.width(),
+              width = elw > settings.maximum ? settings.maximum : elw < settings.minimum ? settings.minimum : elw,
+              fontBase = width / settings.fontRatio,
+              fontSize = fontBase > settings.maxFont ? settings.maxFont : fontBase < settings.minFont ? settings.minFont : fontBase;
+           $el.css('font-size', fontSize + 'px');
+        };
+
+  // Make the magic visible
+  // ======================
+        return this.each(function() {
+        // Context for resize callback
+           var that = this;
+        // Make changes upon resize
+           $(window).resize(function(){changes(that);});
+        // Set changes on load
+           changes(this);
+        });
+     };
+  }(jQuery));
+}

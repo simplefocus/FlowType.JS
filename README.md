@@ -17,7 +17,14 @@ Set minimum and maximum width thresholds to control the FlowType.JS magic within
 In this example, FlowType.JS will stop resizing text once the element width becomes smaller than 500px or larger than 1200px.
 
 ```javascript
+// jQuery:
 $('body').flowtype({
+   minimum : 500,
+   maximum : 1200
+});
+
+// Prototype:
+$(document.body).flowtype({
    minimum : 500,
    maximum : 1200
 });
@@ -28,7 +35,14 @@ Set minimum and maximum font-size thresholds to control the FlowType.JS magic wi
 In this example, FlowType.JS will stop resizing text once the font-size becomes smaller than 12px or larger than 40px.
 
 ```javascript
+// jQuery:
 $('body').flowtype({
+   minFont : 12,
+   maxFont : 40
+});
+
+// Prototype:
+$(document.body).flowtype({
    minFont : 12,
    maxFont : 40
 });
@@ -43,7 +57,13 @@ _Note:_ Because each font is different, you will need to "tweak" `fontSize` and 
 ~~Line-height (`lineRatio`) is set based on the `fontRatio` size, and defaults to 1.45 (the recommended line-height for maximum legibility).~~ See *line-height* below.
 
 ```javascript
+// jQuery:
 $('body').flowtype({
+   fontRatio : 30
+});
+
+// Prototype:
+$(document.body).flowtype({
    fontRatio : 30
 });
 ```
@@ -84,14 +104,18 @@ _Note:_ Setting a specific font-size in your CSS file will make sure that your w
 
 ### Step 2: Include FlowType.JS ###
 
-After you have downloaded FlowType.JS, include both jQuery and `flowtype.js` in the head of your HTML document.
+After you have downloaded FlowType.JS, include both jQuery or Prototype and `flowtype.js` in the head of your HTML document.
 
 ### Step 3: Call FlowType.JS ###
 
 To begin the magic, simply call FlowType.JS before the close of your body tag:
 
 ```javascript
+// jQuery:
 $('body').flowtype();
+
+// Prototype:
+$(document.body).flowtype();
 ```
 
 ### Step 4: Make Changes ###
@@ -99,7 +123,16 @@ $('body').flowtype();
 You will most likely want to change the default settings. To do so, simply include these options in your code and tweak away:
 
 ```javascript
+// jQuery:
 $('body').flowtype({
+   minimum   : 500,
+   maximum   : 1200,
+   minFont   : 12,
+   maxFont   : 40,
+   fontRatio : 30
+});
+// Prototype:
+$(document.body).flowtype({
    minimum   : 500,
    maximum   : 1200,
    minFont   : 12,
@@ -110,6 +143,6 @@ $('body').flowtype({
 
 ## Brought to you by... ##
 
-This wonderful piece of magic has been brought to you by the team at [Simple Focus](http://simplefocus.com). Follow Simple Focus on Twitter: [@simplefocus](http://twitter.com/simplefocus).
+This wonderful piece of magic has been brought to you by the team at [Simple Focus](http://simplefocus.com). Follow Simple Focus on Twitter: [@simplefocus](http://twitter.com/simplefocus). FlowType also works with Prototype.js thanks to [Walter Davis Studio](http://walterdavisstudio.com).
 
 FlowType.JS is licensed under the MIT License. See the LICENSE.txt file for copy permission.
