@@ -17,7 +17,14 @@ Set minimum and maximum width thresholds to control the FlowType.JS magic within
 In this example, FlowType.JS will stop resizing text once the element width becomes smaller than 500px or larger than 1200px.
 
 ```javascript
+// jQuery:
 $('body').flowtype({
+   minimum : 500,
+   maximum : 1200
+});
+
+// Prototype:
+$(document.body).flowtype({
    minimum : 500,
    maximum : 1200
 });
@@ -28,7 +35,14 @@ Set minimum and maximum font-size thresholds to control the FlowType.JS magic wi
 In this example, FlowType.JS will stop resizing text once the font-size becomes smaller than 12px or larger than 40px.
 
 ```javascript
+// jQuery:
 $('body').flowtype({
+   minFont : 12,
+   maxFont : 40
+});
+
+// Prototype:
+$(document.body).flowtype({
    minFont : 12,
    maxFont : 40
 });
@@ -43,7 +57,13 @@ _Note:_ Because each font is different, you will need to "tweak" `fontSize` and 
 ~~Line-height (`lineRatio`) is set based on the `fontRatio` size, and defaults to 1.45 (the recommended line-height for maximum legibility).~~ See *line-height* below.
 
 ```javascript
+// jQuery:
 $('body').flowtype({
+   fontRatio : 30
+});
+
+// Prototype:
+$(document.body).flowtype({
    fontRatio : 30
 });
 ```
@@ -103,7 +123,16 @@ $(document.body).flowtype();
 You will most likely want to change the default settings. To do so, simply include these options in your code and tweak away:
 
 ```javascript
+// jQuery:
 $('body').flowtype({
+   minimum   : 500,
+   maximum   : 1200,
+   minFont   : 12,
+   maxFont   : 40,
+   fontRatio : 30
+});
+// Prototype:
+$(document.body).flowtype({
    minimum   : 500,
    maximum   : 1200,
    minFont   : 12,
