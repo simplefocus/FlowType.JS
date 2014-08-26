@@ -1,5 +1,5 @@
 {
-    "name": "Flowtype.js",
+    "name": "flowtype.js",
     "version": "1.0.0",
     "main": ["flowtype.js"],
     "ignore": [],
