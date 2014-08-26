@@ -53,7 +53,7 @@ $('body').flowtype({
 
 In v1.0 of FlowType, we made the plugin set a specific line-height in pixels. We received many statements that setting a specific line-height is very dangerous. So, what did we do? We removed support for line-height in v1.1.
 
-What do I do now? It's quite simple: use unitless line-height in your CSS. It will automatically make changes based on whatever the font-size is. Here's an example of what we suggest for `line-height`:
+What do I do now? It's quite simple: use unitless line-height in your CSS. It will automatically make changes based on the `font size`. Here's an example of what we suggest for `line-height`:
 
 ```css
 line-height: 1.45;
@@ -82,9 +82,11 @@ h3 { etc...
 
 _Note:_ Setting a specific font-size in your CSS file will make sure that your website remains accessible in case your viewer has JavaScript disabled. These numbers will be overridden as FlowType.JS updates the `font-size` number inline.
 
-### Step 2: Include FlowType.JS ###
+### Step 2: Install FlowType.JS ###
 
-After you have downloaded FlowType.JS, include both jQuery and `flowtype.js` in the `head` of your HTML document.
+- [Download the latest release](https://github.com/simplefocus/FlowType.JS/archive/v1.1.0.zip).
+- Clone the repo: `git clone https://github.com/simplefocus/FlowType.JS.git`.
+- Install with [Bower](http://bower.io): `bower install Flowtype.js`.
 
 ### Step 3: Call FlowType.JS ###
 
