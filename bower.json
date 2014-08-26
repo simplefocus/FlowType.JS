@@ -4,9 +4,6 @@
     "main": ["flowtype.js"],
     "ignore": [],
     "dependencies": {
-
-    },
-    "devDependencies": {
-
+      "jquery": "latest"
     }
 }
