@@ -70,6 +70,7 @@
             fontBase = width / settings.fontRatio,
             fontSize = fontBase > settings.maxFont ? settings.maxFont : fontBase < settings.minFont ? settings.minFont : fontBase;
          $el.css('font-size', fontSize + 'px');
+         $el.triggerHandler('flowtype-finish');
       };
 
 // Make the magic visible
