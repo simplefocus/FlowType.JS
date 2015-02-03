@@ -62,7 +62,19 @@ line-height: 1.45;
 
 ## Getting Started ##
 
-### Step 1: Set Typography Base ###
+### Step 1: Install FlowType.JS ###
+
+To use FlowType, you'll need to make sure both the FlowType.JS and jQuery scripts are included.
+
+#####jQuery:#####
+- Include jQuery script `<script src="//code.jquery.com/jquery-latest.min.js"></script>`
+
+#####FlowType.JS:#####
+- [Download the latest release](https://github.com/simplefocus/FlowType.JS/archive/v1.1.0.zip).
+- Clone the repo: `git clone https://github.com/simplefocus/FlowType.JS.git`.
+- Install with [Bower](http://bower.io): `bower install Flowtype.js`.
+
+### Step 2: Set Typography Base ###
 
 Prepare for FlowType.JS by making sure that the typography is flexible. Start with this CSS and make changes as necessary:
 
@@ -81,12 +93,6 @@ h3 { etc...
 ```
 
 _Note:_ Setting a specific font-size in your CSS file will make sure that your website remains accessible in case your viewer has JavaScript disabled. These numbers will be overridden as FlowType.JS updates the `font-size` number inline.
-
-### Step 2: Install FlowType.JS ###
-
-- [Download the latest release](https://github.com/simplefocus/FlowType.JS/archive/v1.1.0.zip).
-- Clone the repo: `git clone https://github.com/simplefocus/FlowType.JS.git`.
-- Install with [Bower](http://bower.io): `bower install Flowtype.js`.
 
 ### Step 3: Call FlowType.JS ###
 
