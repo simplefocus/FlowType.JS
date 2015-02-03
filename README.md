@@ -64,15 +64,18 @@ line-height: 1.45;
 
 ### Step 1: Install FlowType.JS ###
 
-To use FlowType, you'll need to make sure both the FlowType.JS and jQuery scripts are included.
+To use FlowType, you'll need to make sure both the jQuery and FlowType.JS scripts are included.
 
-#####jQuery:#####
-- Include jQuery script `<script src="//code.jquery.com/jquery-latest.min.js"></script>`
-
-#####FlowType.JS:#####
+#####Download FlowType.JS#####
 - [Download the latest release](https://github.com/simplefocus/FlowType.JS/archive/v1.1.0.zip).
 - Clone the repo: `git clone https://github.com/simplefocus/FlowType.JS.git`.
 - Install with [Bower](http://bower.io): `bower install Flowtype.js`.
+
+#####Include jQuery and FlowType.JS scripts#####
+```html
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="flowtype.js"></script>
+```
 
 ### Step 2: Set Typography Base ###
 
