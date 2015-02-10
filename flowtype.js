@@ -42,6 +42,9 @@
             var width = elw > settings.maximum ? settings.maximum : elw < settings.minimum ? settings.minimum : elw,
                fontBase = width / settings.fontRatio,
                fontSize = fontBase > settings.maxFont ? settings.maxFont : fontBase < settings.minFont ? settings.minFont : fontBase;
+            console.log('holler');
+            console.log('at');
+            console.log('your');
 
             $el.css({
                'font-size'   : fontSize + unit,
