@@ -47,6 +47,10 @@
                'font-size'   : fontSize + unit,
                'line-height' : settings.useEm ? settings.lineRatio + unit : fontSize * settings.lineRatio + unit
             });
+
+            console.log('holler');
+            console.log('at');
+            console.log('your');
       };
 
 // Make the magic visible
@@ -57,6 +61,7 @@
          var that = this;
       // Make changes upon resize
          $(window).resize(function(){changes(that);});
+         console.log('boy');
          
       // Set changes on load
          changes(this);
