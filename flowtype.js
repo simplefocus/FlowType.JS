@@ -40,7 +40,13 @@
       // Context for resize callback
          var that = this;
       // Make changes upon resize
-         $(window).resize(function(){changes(that);});
+         var to = undefined;
+         $(window).resize(function(){   
+        	 changes(that);
+        	 //debounce resizes for slow browser that can't keep up with layout
+        	 if (to) clearTimeout(to);
+        	 to = setTimeout(function() {changes(that)}, 200);
+         });
       // Set changes on load
          changes(this);
       });
