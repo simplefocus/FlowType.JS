@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>flowtype</title>
+</head>
+<body>
+  <h1 class="flowtype" data-minimum="500"  data-maximum="1200" data-min-font="20"  data-max-font="40"  data-font-ratio="30">asdsadasda</h1>
+  <h2 class="flowtype" data-minimum="500"  data-maximum="1200" data-min-font="15"  data-max-font="30"  data-font-ratio="30">asdsadasda</h2> 
+
+<script src="jquery.min.js"></script>
+<script src="flowtype.js"></script>
+
+<script>
+$( ".flowtype" ).each(function(index) {
+	$(this).flowtype({
+	   minimum   : $(this).data("minimum"),
+	   maximum   : $(this).data("maximum"),
+	   minFont   : $(this).data("min-font"),
+	   maxFont   : $(this).data("max-font"),
+	   fontRatio : $(this).data("font-ratio")
+	});
+});
+
+</script>
+</body>
+</html>
