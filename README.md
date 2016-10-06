@@ -128,14 +128,14 @@ $('body').flowtype({
    maxFont   : 40,
    fontRatio : 30
 }),
-$("article").flowtype({
+$('article').flowtype({
     fontRatio: 36
 }),
-$(".featured-article").flowtype({
+$('.featured-article').flowtype({
     minFont: 12,
     fontRatio: 20
 }),
-$(".side-stories").flowtype({
+$('.side-stories').flowtype({
     minFont: 16,
     fontRatio: 30
 });
