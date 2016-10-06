@@ -118,6 +118,28 @@ $('body').flowtype({
    fontRatio : 30
 });
 ```
+_Note:_ When using FlowType.JS, it will only perform it's magic on the element and child elements that are specified in the closing document's call. For example, if you have `<p>` inside of an `<article>` and you apply FlowType.JS to `<p>`, it will only update `<p>` and not `<article>`. But, if you apply FlowType.JS to `<article>`, the entire contents including `<p>` will be updated. We believe that this can be used to your advantage. So, tweak and change as you feel necessary:
+
+```javascript
+$('body').flowtype({
+   minimum   : 500,
+   maximum   : 1200,
+   minFont   : 12,
+   maxFont   : 40,
+   fontRatio : 30
+}),
+$("article").flowtype({
+    fontRatio: 36
+}),
+$(".featured-article").flowtype({
+    minFont: 12,
+    fontRatio: 20
+}),
+$(".side-stories").flowtype({
+    minFont: 16,
+    fontRatio: 30
+});
+```
 
 ## Brought to you by... ##
 
