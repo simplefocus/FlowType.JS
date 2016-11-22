@@ -1,0 +1,50 @@
+/*
+* FlowType Sass Mixin 1.1
+*/
+
+// Establish default settings/variables
+// ====================================
+$maximum: 1000;
+$minimum: 1;
+$maxFont: 36;
+$minFont: 12;
+$fontRatio: 35;
+
+// Mixin start
+// ===========
+@mixin flowtype($maximum, $minimum, $maxFont, $minFont, $fontRatio) {
+  $fontSize: $maxFont;
+  $tempFontSize: $fontSize;
+
+// Output media query for minimum size
+// ===================================
+  @media screen and (max-width: #{$minimum}px) {
+    font-size: #{$minFont}px;
+  }
+
+// Do the magic math
+// =================
+  @for $i from $minimum through $maximum {
+    $fontBase: floor($i / $fontRatio);
+      
+    @if $fontBase > $maxFont {
+      $fontSize: $maxFont;  
+    }
+    @else if $fontBase < $minFont {
+      $fontSize: $minFont;
+    }
+    @else {
+      $fontSize: $fontBase;
+    }
+
+// Output media queries
+// ====================      
+    @if $tempFontSize != $fontSize {
+      @media screen and (min-width: #{$i}px) {
+        font-size: #{$fontSize}px;
+      }
+    }
+
+    $tempFontSize: $fontSize;
+  }
+}
