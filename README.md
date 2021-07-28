@@ -1,3 +1,9 @@
+> # Update: 07/28/2021 #
+> 
+> The functionality of the plugin can be implemented using plain css these days.
+> 
+> [https://css-tricks.com/snippets/css/fluid-typography/](https://css-tricks.com/snippets/css/fluid-typography/)
+
 # FlowType.JS #
 
 Responsive web typography at its finest: font-size ~~and line-height~~ based on element width.
