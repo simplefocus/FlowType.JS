@@ -147,6 +147,30 @@ $('.side-stories').flowtype({
 });
 ```
 
+## FlowType Sass Mixin ##
+
+FlowType is also available as a Sass Mixin. The mixin provides the FlowType functionality using only CSS.
+
+To use the mixin, include the FlowType.scss file into your project and compile using your preferred Sass compiler. You may want to tweak the default settings found in the FlowType.scss file:
+
+```scss
+$minimum: 500;
+$maximum: 1200;
+$minFont: 12;
+$maxFont: 40;
+$fontRatio: 30;
+```
+
+Then, simply `@include` the mixin into your project:
+
+```scss
+body {
+  @include flowtype($minimum, $maximum, $minFont, $maxFont, $fontRatio);
+}
+```
+
+The mixin will apply all necessary media queries to enable the FlowType functionality.
+
 ## Brought to you by... ##
 
 This wonderful piece of magic has been brought to you by the team at [Simple Focus](http://simplefocus.com). Follow Simple Focus on Twitter: [@simplefocus](http://twitter.com/simplefocus).
