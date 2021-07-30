@@ -32,6 +32,13 @@
             fontBase = width / settings.fontRatio,
             fontSize = fontBase > settings.maxFont ? settings.maxFont : fontBase < settings.minFont ? settings.minFont : fontBase;
          $el.css('font-size', fontSize + 'px');
+
+	// Center vertically in the parent Div
+        var myHeight = $el.height(),
+            myParentHeight = $el.parent().height(),
+            myPaddingTop = (myParentHeight - myHeight) / 2;
+
+        $el.css('padding-top', myPaddingTop + 'px');
       };
 
 // Make the magic visible
